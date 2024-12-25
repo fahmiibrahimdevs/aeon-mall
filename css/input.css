@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-2xl;
+    }
+    h2 {
+        @apply text-xl;
+    }
+    h3 {
+        @apply text-lg;
+    }
+    h4 {
+        @apply text-base;
+    }
+    h5 {
+        @apply text-sm;
+    }
+    h6 {
+        @apply text-xs;
+    }
+    ul,
+    ol {
+        list-style: revert;
+        margin: revert;
+        padding: revert;
+    }
+    ol,
+    ol > li {
+        /* margin-top: 10px; */
+    }
+    a {
+        @apply !no-underline;
+    }
+}
+
+@layer components {
+    .show-entries {
+        @apply ml-4 flex justify-center lg:justify-start;
+    }
+
+    .search-column {
+        @apply mb-5 mt-3 flex justify-center lg:mt-[-45px] lg:justify-start;
+    }
+
+    .btn-modal {
+        @apply fixed bottom-12 right-7 z-40 h-14 w-14 rounded-full bg-slate-900 text-white shadow-2xl hover:border-slate-600 hover:bg-slate-700;
+    }
+
+    .mid-menu-header {
+        @apply px-3 text-xs text-gray-300 mt-8 uppercase tracking-wider font-bold;
+    }
+
+    .mid-nav-link {
+        @apply px-5 text-sm text-white mt-3;
+    }
+
+    .mid-nav-link-focus {
+        @apply hover:text-green-300 bg-white;
+    }
+
+    .mid-has-dropdown {
+        @apply flex items-center p-2 w-full text-sm font-normal text-white rounded-lg transition duration-75 hover:bg-gray-700;
+    }
+
+    .mid-title-sidebar {
+        @apply flex-1 ml-4 text-left whitespace-nowrap;
+    }
+
+    .mid-nav-link-child {
+        @apply flex items-center p-2 text-sm font-normal rounded-lg text-white hover:bg-gray-700;
+    }
+
+    .mid-nav-link-dropdown {
+        @apply flex items-center p-2 pl-9 w-full text-sm font-normal text-white rounded-lg transition duration-75 hover:bg-gray-700;
+    }
+}
+
+@layer utilities {
+    body {
+        @apply tracking-wider;
+    }
+
+    #isi-catatan img {
+        @apply rounded-[6px] mx-auto block;
+    }
+
+    #isi-catatan span#codeselector {
+        @apply text-pink-600 font-mono font-bold text-[14px] tracking-wider p-1 bg-gray-900 rounded-[4px];
+    }
+
+    #isi-catatan code {
+        @apply p-1 text-blue-400 bg-gray-900 rounded-[4px] text-sm font-bold select-all;
+    }
+
+    #isi-catatan h1 > b {
+        @apply text-cyan-300;
+    }
+
+    #isi-catatan h2 > b {
+        @apply text-yellow-300;
+    }
+
+    #isi-catatan h3 > b {
+        @apply text-cyan-300;
+    }
+
+    #isi-catatan h4 > b {
+        @apply text-cyan-300;
+    }
+
+    #isi-catatan b {
+        @apply text-cyan-300;
+    }
+
+    #isi-catatan a {
+        @apply text-blue-400;
+    }
+
+    #isi-catatan pre.hljs {
+        @apply !bg-[hsl(225,64%,11%)] lg:!bg-[hsl(233,58%,8%)] !text-sm !leading-loose !px-4 lg:!px-5 !py-4 !rounded-none lg:!rounded-lg !font-semibold lg:!font-normal !no-scrollbar !mx-[-18px] !tracking-normal;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .section > .section-header {
+        @apply px-6 rounded-none shadow-md shadow-gray-200 lg:rounded-lg;
+    }
+
+    .section > .section-header > h1 {
+        @apply mb-1 text-lg tracking-wider;
+    }
+
+    .card-body {
+        @apply px-0;
+    }
+
+    table {
+        @apply w-full table-fixed;
+    }
+
+    table > thead > tr {
+        @apply text-xs uppercase tracking-widest;
+    }
+
+    table > tbody > tr {
+        @apply text-gray-700;
+    }
+
+    table > thead > tr > th {
+        @apply bg-gray-100 p-4 text-xs text-gray-600;
+    }
+
+    table > tbody > tr > td {
+        @apply border-b text-sm tracking-normal border-gray-100 px-4 py-2;
+    }
+
+    table > tbody {
+        @apply text-black;
+    }
+
+    .card-body > h3 {
+        @apply mb-5 ml-4 text-base text-black;
+    }
+
+    .show-entries > p.show-entries-show {
+        @apply mr-1 mt-1 text-gray-800;
+    }
+
+    .show-entries > p.show-entries-entries {
+        @apply ml-1 mt-1 text-gray-800;
+    }
+
+    .show-entries > select {
+        @apply rounded-lg border px-4 py-1 border-gray-200;
+    }
+
+    .search-column > p {
+        @apply ml-0 mr-1 mt-1 text-gray-800 lg:ml-auto;
+    }
+
+    .search-column > input {
+        @apply mr-4 w-2/3 rounded-lg border border-gray-200 lg:w-1/4;
+    }
+
+    .main-content {
+        @apply px-0;
+    }
+
+    .card {
+        @apply rounded-none shadow-md shadow-gray-300 lg:rounded-lg;
+    }
+
+    .card > .card-body {
+        @apply px-0;
+    }
+
+    .card > h3 {
+        @apply tracking-wider text-[#34395e] ml-6 mt-6 mb-5 lg:mb-1 text-base font-semibold;
+    }
+
+    .section-body {
+        @apply mt-[-10px];
+    }
+
+    input.form-control {
+        @apply rounded-lg border border-gray-200 text-sm;
+    }
+
+    select.form-control {
+        @apply rounded-lg;
+    }
+
+    textarea.form-control {
+        @apply rounded-lg;
+    }
+
+    .navbar.navbar-expand-lg.main-navbar {
+        @apply px-0 lg:px-5;
+    }
+
+    .hide-scrollbar {
+        scrollbar-width: none; /* Untuk Firefox */
+    }
+    
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none; /* Untuk Chrome, Safari, dan Edge */
+    }
+
+    .box {
+        position: relative;
+        display: block;
+        /* background: blue; */
+        text-align: center;
+        color: white;
+        padding: 15px;
+        margin: 50px;
+    }
+
+    .box:before,
+    .box:after {
+        content: "";
+        position: absolute;
+        left: 0; 
+        right: 0;
+        bottom: 100%;
+        border-bottom: 15px solid #bfdbfe;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+    }
+
+    .box:before{
+        border-left: 15px solid #bfdbfe;
+    }
+
+    .box:after{
+        border-right: 15px solid #bfdbfe;
+    }
+
+    .box:after {
+        bottom: auto;
+        top: 100%;
+        border-bottom: none;
+        border-top: 15px solid #bfdbfe;
+    }
+
+    .bottominfo {
+        background-image: url('https://aeonmall-tanjungbarat.com/images/content/mallinfo.jpg');
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        inset: 0px; /* border width */
+        clip-path: polygon(20% 0, 100% 0, 100% 30%, 100% 70%, 93% 100%, 50% 100%, 0 100%, 0% 30%);
+      }
+      
+      .bottominfo-wrapper {
+        position: relative;
+        height: 300px;
+        clip-path: polygon(20% 0, 100% 0, 100% 30%, 100% 70%, 85% 100%, 30% 100%, 0 100%, 0% 30%);
+      }
+}

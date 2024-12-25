@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AEON Mall Tanjung Barat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body style="font-family: 'Inter', sans-serif;" class="tracking-normal">
+    <!-- Responsive Mobile Mode Navigation -->
+    <!-- Mobile menu bar -->
+    <div id="navbar"
+        class="fixed w-full mt-0 top-0 text-gray-100 bg-slate-900 flex justify-between lg:hidden drop-shadow-lg z-[20]">
+        <!-- Logo -->
+        <a href="#" class="p-4 text-white font-bold flex">
+            <span class="font-bold uppercase tracking-widest ml-2">AEON MALL</span>
+        </a>
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-button p-4 focus:outline-none md:hidden">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+    </div>
+    <!-- Mobile menu bar -->
+
+    <!-- Sidebar -->
+    <div id="overlay" class="fixed inset-0 bg-black opacity-80 hidden z-40"></div>
+    <div
+        class="sidebar w-64 lg:hidden md:hidden no-scrollbar overflow-y-scroll bg-slate-950 h-screen fixed inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out md:relative md:translate-x-0 z-50 text-white">
+        <!-- logo -->
+        <div class="px-4 pt-4 flex justify-center">
+            <a href="index.html" class="flex space-x-2">
+                <span class="font-extrabold uppercase tracking-widest">AEON MALL</span>
+            </a>
+        </div>
+        <!-- logo -->
+        <!-- nav -->
+        <nav>
+            <ul class="list-none p-0">
+                <li class="mid-menu-header text-white">MAIN MENU</li>
+                <li class="mid-nav-link">
+                    <a href="index.html" class="mid-nav-link-child">
+                        <i class="fas fa-home"></i>
+                        <span class="ml-3">HOME</span>
+                    </a>
+
+                </li>
+                <li class="mid-nav-link">
+                    <a class="mid-has-dropdown" aria-controls="dropdown-dashboard"
+                        data-collapse-toggle="dropdown-dashboard">
+                        <i class="far fa-info-circle"></i>
+                        <span class="mid-title-sidebar" sidebar-toggle-item>ABOUT</span>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul id="dropdown-dashboard" class="hidden py-2 space-y-2">
+                        <li><a href="overview.html" class="mid-nav-link-dropdown">AEON Overview</a></li>
+                        <li><a href="about.html" class="mid-nav-link-dropdown">WHY AEON</a></li>
+                    </ul>
+                </li>
+                <li class="mid-nav-link">
+                    <a href="events.html" class="mid-nav-link-child">
+                        <i class="fas fa-project-diagram"></i>
+                        <span class="ml-3">EVENTS</span>
+                    </a>
+                </li>
+                <li class="mid-nav-link">
+                    <a href="contact-us.html" class="mid-nav-link-child text-cyan-300">
+                        <i class="fas fa-phone"></i>
+                        <span class="ml-3">CONTACT US</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="my-12">
+            </div>
+        </nav>
+        <!-- nav -->
+    </div>
+    <!-- Sidebar -->
+    <!-- Responsive Mobile Mode Navigation -->
+
+    <!-- Responsive Desktop Mode Navigation -->
+    <nav class="hidden lg:block bg-white border-gray-200 fixed top-0 left-0 w-full z-50" id="navbar">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2.5">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="image/logo.png" class="h-12 mt-3" alt="Flowbite Logo" />
+            </a>
+            <!-- Logo -->
+            <!-- Navbar -->
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+                class="inline-flex items-center p-2 ms-3 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul
+                    class="flex flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:mt-0 md:text-sm  md:border-0 md:bg-white md:space-x-8 md:rtl:space-x-reverse">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 text-black bg-blue-700 rounded md:bg-transparent md:p-0"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center justify-between w-full py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">About
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <div id="dropdownNavbar"
+                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                            <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="overview.html" class="block px-4 py-2 hover:bg-gray-100">AEON Overview</a>
+                                </li>
+                                <li>
+                                    <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">WHY AEON</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="events.html"
+                            class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Events</a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html"
+                            class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:text-blue-700 md:p-0">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Navbar -->
+        </div>
+    </nav>
+    <!-- Responsive Desktop Mode Navigation -->
+
+    <!-- Content -->
+    <!-- Banner Image -->
+    <img src="https://www.aeonmall-deltamas.com/wp-content/themes/aeon/assets/img/img_index_01.jpg"
+        class="h-96 lg:h-auto w-full" alt="">
+    <!-- Banner Image -->
+    <div class="flex text-black flex-col min-h-screen mt-14 lg:mt-20" id="main-content">
+        <!-- Main Content -->
+        <main>
+            <div class="flex-grow container max-w-5xl mx-auto">
+                <!-- Header & Description -->
+                <div class="text-center space-y-10 px-4 lg:px-0">
+                    <h1 class="text-3xl lg:text-5xl text-slate-900 font-semibold">CONTACT US</h1>
+                    <p class="text-base lg:text-xl text-gray-600 leading-relaxed">
+                        Ada pertanyaan tentang produk atau pengembangan di platform kami? Kami siap membantu! Hubungi
+                        tim ramah kami kapan saja, 24/7, dan mulai bergabung dalam waktu kurang dari 5 menit.</p>
+                </div>
+                <!-- Header & Description -->
+                <div class="mt-20 mb-32">
+                    <div class="grid grid-cols-1 lg:grid-cols-3">
+                        <!-- Form Input -->
+                        <div class="col-span-2 mb-20 lg:mb-0 px-4">
+                            <form>
+                                <div class="grid grid-cols-2 gap-x-4 lg:gap-x-8">
+                                    <div>
+                                        <label for="first_name"
+                                            class="block mb-2 text-base font-semibold text-gray-800">First
+                                            name</label>
+                                        <input type="text" id="first_name"
+                                            class="border border-gray-300 text-gray-800 text-base rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5"
+                                            placeholder="First name" required />
+                                    </div>
+                                    <div>
+                                        <label for="last_name"
+                                            class="block mb-2 text-base font-semibold text-gray-800">Last
+                                            name</label>
+                                        <input type="text" id="last_name"
+                                            class="border border-gray-300 text-gray-800 text-base rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5"
+                                            placeholder="Last name" required />
+                                    </div>
+                                </div>
+                                <div class="mt-6">
+                                    <label for="last_name"
+                                        class="block mb-2 text-base font-semibold text-gray-800">Email</label>
+                                    <input type="email" id="last_name"
+                                        class="border border-gray-300 text-gray-800 text-base rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5"
+                                        placeholder="you@company.com" required />
+                                </div>
+                                <div class="mt-6">
+                                    <label for="message"
+                                        class="block mb-2 text-base font-semibold text-gray-800">Message</label>
+                                    <textarea id="message" rows="4"
+                                        class="block p-2.5 w-full text-base text-gray-800 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                        placeholder="Write your thoughts here..."></textarea>
+                                </div>
+                                <div class="mt-6">
+                                    <button class="w-full py-3 bg-slate-950 text-white tracking-wide rounded-xl">Send
+                                        Message</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Form Input -->
+                        <!-- Detail Location, Phone, Email -->
+                        <div class="ml-0 px-4 lg:ml-10 lg:px-0 tracking-normal">
+                            <p class="font-semibold mb-3 text-xl">AEON MALL Tanjung Barat</p>
+                            <p>Jl. Raya Tanjung Barat No.163, RT.12/RW.4, Tanjung Barat, Jagakarsa, Kota Jakarta
+                                Selatan, Jakarta 12530</p>
+                            <div class="flex space-x-3 mt-10 text-xl">
+                                <i class="fas fa-phone-plus mt-1"></i>
+                                <p>021 – 5095 9888</p>
+                            </div>
+                            <div class="flex space-x-3 mt-3 text-xl">
+                                <i class="fas fa-envelope-open-text mt-1"></i>
+                                <p>operation.aeonmalltanjungbarat<br>@aeonmall.co.id</p>
+                            </div>
+                        </div>
+                        <!-- Detail Location, Phone, Email -->
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Main Content -->
+
+        <!-- Footer -->
+        <footer class="bg-slate-800 text-white py-8">
+            <div class="container mx-auto text-center">
+                <div class="justify-center items-center space-x-10 mb-10 lg:flex">
+                    <div>
+                        <img src="image/logo-removebg.png" class="ml-7 lg:ml-2" alt="">
+                        <ul class="flex space-x-5 ml-8 lg:space-x-10 lg:-ml-4 mt-10 list-none text-lg">
+                            <li class="ml-0"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="social-media" class="flex justify-center items-center space-x-10 mb-14">
+                    <a href="https://www.facebook.com/aeonmalltanjungbarat/" target="_BLANK"><i
+                            class="fab fa-facebook text-4xl"></i></a>
+                    <a href="https://instagram.com/aeonmall_tanjungbarat?utm_medium=copy_link" target="_BLANK"><i
+                            class="fab fa-instagram text-4xl"></i></a>
+                    <a href="https://youtube.com/channel/UCdebImqCPmfu0xb8enzRkVw" target="_BLANK"><i
+                            class="fab fa-youtube text-4xl"></i></a>
+                </div>
+                <div id="copyright" class="text-lg">
+                    <p>Copyright &copy; 2023 AEON Mall. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer -->
+    </div>
+    <!-- Content -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script>
+        const btn = document.querySelector(".mobile-menu-button");
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector("#overlay");
+        const body = document.querySelector("body");
+
+        btn.addEventListener("click", () => {
+            sidebar.classList.toggle("-translate-x-full");
+            overlay.classList.toggle("hidden");
+            body.classList.toggle("overflow-hidden");
+            if (!sidebar.classList.contains("-translate-x-full")) {
+                overlay.classList.remove("hidden");
+                body.classList.add("overflow-hidden");
+            } else {
+                overlay.classList.add("hidden");
+                body.classList.remove("overflow-hidden");
+            }
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+            body.classList.remove("overflow-hidden");
+        });
+    </script>
+    <script>
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(1, 0, 27, 0.5)';
+                navbar.style.backdropFilter = 'blur(5px)';
+            } else {
+                navbar.style.backgroundColor = 'transparent';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

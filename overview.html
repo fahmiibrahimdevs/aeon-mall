@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview - AEON Mall Tanjung Barat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <style>
+        .thumbnail-1 {
+            background-image: url('image/food-street.jpg');
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            inset: 0px;
+            /* border width */
+            clip-path: polygon(20% 0, 100% 0, 100% 30%, 100% 70%, 93% 100%, 50% 100%, 0 100%, 0% 30%);
+        }
+
+        .thumbnail-1-wrapper {
+            position: relative;
+            height: 300px;
+            clip-path: polygon(20% 0, 100% 0, 100% 30%, 100% 70%, 85% 100%, 30% 100%, 0 100%, 0% 30%);
+        }
+
+        #panorama {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Inter', sans-serif;" class="tracking-normal">
+    <!-- Responsive Mobile Mode Navigation -->
+    <!-- Mobile menu bar -->
+    <div id="navbar"
+        class="fixed w-full mt-0 top-0 text-gray-100 bg-slate-900 flex justify-between lg:hidden drop-shadow-lg z-[20]">
+        <!-- Logo -->
+        <a href="#" class="p-4 text-white font-bold flex">
+            <span class="font-bold uppercase tracking-widest ml-2">AEON MALL</span>
+        </a>
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-button p-4 focus:outline-none md:hidden">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+    </div>
+    <!-- Mobile menu bar -->
+
+    <!-- Sidebar -->
+    <div id="overlay" class="fixed inset-0 bg-black opacity-80 hidden z-40"></div>
+    <div
+        class="sidebar w-64 lg:hidden md:hidden no-scrollbar overflow-y-scroll bg-slate-950 h-screen fixed inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out md:relative md:translate-x-0 z-50 text-white">
+        <!-- logo -->
+        <div class="px-4 pt-4 flex justify-center">
+            <a href="index.html" class="flex space-x-2">
+                <span class="font-extrabold uppercase tracking-widest">AEON MALL</span>
+            </a>
+        </div>
+
+        <!-- nav -->
+        <nav>
+            <ul class="list-none p-0">
+                <li class="mid-menu-header text-white">MAIN MENU</li>
+                <li class="mid-nav-link">
+                    <a href="index.html" class="mid-nav-link-child">
+                        <i class="fas fa-home"></i>
+                        <span class="ml-3">HOME</span>
+                    </a>
+
+                </li>
+                <li class="mid-nav-link">
+                    <a class="mid-has-dropdown" aria-controls="dropdown-dashboard"
+                        data-collapse-toggle="dropdown-dashboard">
+                        <i class="fas fa-fire text-cyan-300"></i>
+                        <span class="mid-title-sidebar text-cyan-300" sidebar-toggle-item>ABOUT</span>
+                        <i class="fas fa-angle-down text-cyan-300"></i>
+                    </a>
+                    <ul id="dropdown-dashboard" class="hidden py-2 space-y-2">
+                        <li><a href="overview.html" class="mid-nav-link-dropdown text-cyan-300">AEON Overview</a></li>
+                        <li><a href="about.html" class="mid-nav-link-dropdown">WHY AEON</a></li>
+                    </ul>
+                </li>
+                <li class="mid-nav-link">
+                    <a href="events.html" class="mid-nav-link-child">
+                        <i class="fas fa-project-diagram"></i>
+                        <span class="ml-3">EVENTS</span>
+                    </a>
+                </li>
+                <li class="mid-nav-link">
+                    <a href="contact-us.html" class="mid-nav-link-child">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="ml-3">CONTACT US</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="my-12">
+            </div>
+        </nav>
+    </div>
+    <!-- Sidebar -->
+    <!-- Responsive Mobile Mode Navigation -->
+
+    <!-- Responsive Desktop Mode Navigation -->
+    <nav class="hidden lg:block bg-white border-gray-200 fixed top-0 left-0 w-full z-50" id="navbar">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2.5">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="image/logo.png" class="h-12 mt-3" alt="Flowbite Logo" />
+            </a>
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+                class="inline-flex items-center p-2 ms-3 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul
+                    class="flex flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:mt-0 md:text-sm  md:border-0 md:bg-white md:space-x-8 md:rtl:space-x-reverse">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 bg-blue-700 rounded md:bg-transparent text-gray-700 md:p-0"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:text-blue-700 md:hover:text-blue-700 md:p-0 md:w-auto">About
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <div id="dropdownNavbar"
+                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                            <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="overview.html" class="block px-4 py-2 hover:bg-gray-100">AEON Overview</a>
+                                </li>
+                                <li>
+                                    <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">WHY AEON</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="events.html"
+                            class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Events</a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html"
+                            class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Responsive Desktop Mode Navigation -->
+
+    <!-- Banner Image -->
+    <img src="https://www.aeonmall-deltamas.com/wp-content/themes/aeon/assets/img/img_index_01.jpg"
+        class="h-96 lg:h-auto w-full" alt="">
+    <!-- Banner Image -->
+    <div class="flex text-black flex-col min-h-screen" id="main-content">
+        <!-- Main Content -->
+        <main>
+            <!-- Overview & Panolens -->
+            <div class="bg-none lg:bg-[url('/image/polygon-scatter-haikei.svg')] bg-cover">
+                <div class="py-20">
+                    <div class="flex-grow container max-w-5xl mx-auto">
+                        <div class="text-center space-y-10 px-4 lg:px-0">
+                            <h1 class="text-3xl lg:text-5xl text-slate-900 font-semibold">OVERVIEW</h1>
+                            <p class="text-base lg:text-xl text-gray-600 leading-relaxed">AEON MALL adalah pengembang
+                                pusat
+                                perbelanjaan spesialis. Filosofi kami dalam mengutamakan pelanggan telah memandu upaya
+                                berkelanjutan kami untuk menciptakan mal yang <br>meningkatkan kualitas hidup pelanggan.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-1 mt-20">
+                            <h1 class="text-3xl text-slate-900 font-semibold mb-5">Street View & 360</h1>
+                            <div id="panorama"></div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3 justify-center mt-10 lg:mt-14">
+                        <button onclick="changePano('main-atrium', this)"
+                            class="panorama-btn border-4 border-[#81007f] rounded-xl">
+                            <img src="image/main-atrium.jpg" class="object-cover w-20 h-20 rounded-lg">
+                        </button>
+                        <button onclick="changePano('lt5-indoor', this)" class="panorama-btn border-4 rounded-xl">
+                            <img src="image/lt5-indoor.jpg" class="object-cover w-20 h-20 rounded-lg">
+                        </button>
+                        <button onclick="changePano('lt5-outdoor', this)" class="panorama-btn border-4 rounded-xl">
+                            <img src="image/lt5-outdoor.jpg" class="object-cover w-20 h-20 rounded-lg">
+                        </button>
+                    </div>
+                    <div class="flex-grow container max-w-5xl mx-auto mt-10 lg:mt-14 px-4 lg:px-0">
+                        <h2 id="overview-title" class="text-slate-950 font-semibold text-3xl">...</h2>
+                        <p id="overview-description" class="mt-5 leading-relaxed text-lg text-gray-600">...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Overview & Panolens -->
+            <!-- Ulasan -->
+            <div class="bg-blue-50"
+                style="background-image: radial-gradient(#bfdbfe 1px, transparent 0); background-size: 20px 20px;">
+                <div class="flex-grow container max-w-5xl mx-auto">
+                    <p>‎ </p>
+                    <h1 class="mb-10 text-3xl font-semibold mt-10 text-center">Ulasan</h1>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-4 text-center tracking-normal">
+                        <div class="bg-blue-100 rounded-xl px-4 py-8 shadow-md shadow-blue-200 mt-10 lg:mt-0">
+                            <center>
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjXM-E2x-Wiw0RP_sf-EVRyVb58T3id6x3OTpCHCHKTqF03bYNn8sg=w36-h36-p-rp-mo-ba6-br100"
+                                    class="w-12 h-12" alt="">
+                                <p class="mt-2 font-semibold">Robert Kindangen</p>
+                                <div class="flex justify-center mt-2 mb-5">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                                <p>Lokasi strategis, berseberangan dengan stasiun Tanjung Barat, pusat perbelanjaan
+                                    lengkap, mal baru dengan akses yang mudah, ruang luar hijau dan indah. Akses
+                                    jembatan ke stasiun Tanjung Barat sayang belum selesai dibangun</p>
+                            </center>
+                        </div>
+                        <div class="bg-blue-100 rounded-xl px-4 py-8 shadow-md shadow-blue-200 mt-10 lg:mt-0">
+                            <center>
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjVy32Uvg9o7W5FdV1ZyAsb61_-89s1PuMixjyAYB0gpBlPsl2Hh=w36-h36-p-rp-mo-ba5-br100"
+                                    class="w-12 h-12" alt="">
+                                <p class="mt-2 font-semibold">Datu</p>
+                                <div class="flex justify-center mt-2 mb-5">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                                <p>I visited this place during Chinese New Year. The outdoor was beautifully decorated
+                                    with vibrant red lanterns, creating a festive and welcoming atmosphere. It really
+                                    added to the holiday spirit, and the lighting was stunning at night. The mall its...
+                                </p>
+                            </center>
+                        </div>
+                        <div class="bg-blue-100 rounded-xl px-4 py-8 shadow-md shadow-blue-200 mt-10 lg:mt-0">
+                            <center>
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjXzkr_QAHx2yO0jKSdu4SJWc5nSTvKDFr1VgBUznOT3rwpiDOmG=w36-h36-p-rp-mo-br100"
+                                    class="w-12 h-12" alt="">
+                                <p class="mt-2 font-semibold">Anselvi Mega</p>
+                                <div class="flex justify-center mt-2 mb-5">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                                <p>Pelayanan nya bagus banget, staff juga ramah banget dan cekatan. Kalo menu nya
+                                    gaperlu diragukan lagi lah ya semuanya enak + bisa dapet pancake pas kamu birthday.
+                                    Luvv banget 🙏🫶 …</p>
+                            </center>
+                        </div>
+                    </div>
+                    <p class="mt-20">‎ </p>
+                </div>
+            </div>
+            <!-- Ulasan -->
+        </main>
+        <!-- Main Content -->
+        <!-- Footer -->
+        <footer class="bg-slate-800 text-white py-8">
+            <div class="container mx-auto text-center">
+                <div class="justify-center items-center space-x-10 mb-10 lg:flex">
+                    <div>
+                        <img src="image/logo-removebg.png" class="ml-7 lg:ml-2" alt="">
+                        <ul class="flex space-x-5 ml-8 lg:space-x-10 lg:-ml-4 mt-10 list-none text-lg">
+                            <li class="ml-0"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="social-media" class="flex justify-center items-center space-x-10 mb-14">
+                    <a href="https://www.facebook.com/aeonmalltanjungbarat/" target="_BLANK"><i
+                            class="fab fa-facebook text-4xl"></i></a>
+                    <a href="https://instagram.com/aeonmall_tanjungbarat?utm_medium=copy_link" target="_BLANK"><i
+                            class="fab fa-instagram text-4xl"></i></a>
+                    <a href="https://youtube.com/channel/UCdebImqCPmfu0xb8enzRkVw" target="_BLANK"><i
+                            class="fab fa-youtube text-4xl"></i></a>
+                </div>
+                <div id="copyright" class="text-lg">
+                    <p>Copyright &copy; 2023 AEON Mall. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"></script>
+    <script src="js/panolens.min.js"></script>
+    <script>
+        // Data panorama dalam array
+        const panoramas = {
+            'main-atrium': {
+                title: 'Main Atrium Lt GF',
+                description: 'Ruang luas dengan desain modern, ideal untuk pameran, peluncuran produk, atau acara promosi besar yang memanfaatkan posisi strategis di tengah lalu lintas pengunjung. Area ini dirancang sebagai pusat aktivitas mall, dengan ruang terbuka luas yang memungkinkan berbagai jenis kegiatan dan pameran. Lokasinya strategis, mudah terlihat oleh pengunjung yang baru memasuki mall, sehingga cocok untuk acara yang membutuhkan eksposur tinggi. Kegiatan yang biasa diadakan seperti Event promo besar besaran semacam meet and greet, tennis, peluncuran produk, pameran seni, atau pasar musiman.',
+                image: 'image/main-atrium.jpg'
+            },
+            'lt5-indoor': {
+                title: 'Lt 5 Indoor',
+                description: 'Pada lantai 5 bagian Indoor ini dilengkapi dengan fasilitas modern seperti panggung, sistem pencahayaan, dan audio berkualitas tinggi, cocok untuk acara formal maupun hiburan. Menawarkan fasilitas lengkap seperti panggung dan sistem audio-visual berkualitas, cocok untuk workshop, seminar, atau konser kecil dengan kapasitas besar. Memiliki daya tampung besar sehingga dapat menampung ratusan peserta sekaligus, membuatnya ideal untuk acara komunitas atau korporat. Kegiatan yang biasa diadakan seperti pertunjukan barongsai, pameran baju pameran budaya jepang dan lain sebagainya.',
+                image: 'image/lt5-indoor.jpg'
+            },
+            'lt5-outdoor': {
+                title: 'Lt 5 Outdoor',
+                description: 'Area terbuka ini menawarkan pemandangan luar yang segar, cocok untuk acara yang membutuhkan suasana santai atau tematik. Menghadirkan suasana segar dan terbuka, ideal untuk festival, bazaar, atau perayaan tematik yang memanfaatkan keindahan area luar. Kegiatan yang biasa diadakan seperti festival bazar ramadhan, dan meet and greet anime.',
+                image: 'image/lt5-outdoor.jpg'
+            }
+        };
+
+        // Variabel global untuk panorama dan viewer
+        let viewer;
+        let currentPanorama;
+
+        // Fungsi untuk mengganti panorama
+        function changePano(panoKey, button) {
+            const container = document.getElementById('panorama');
+            const panoramaData = panoramas[panoKey];
+
+            // Jika viewer belum ada, buat viewer baru
+            if (!viewer) {
+                viewer = new PANOLENS.Viewer({
+                    container: container,
+                    cameraFov: 120
+                });
+            }
+
+            // Jika sudah ada panorama sebelumnya, hapus dari viewer
+            if (currentPanorama) {
+                viewer.remove(currentPanorama);
+            }
+
+            // Buat panorama baru dan tambahkan ke viewer
+            currentPanorama = new PANOLENS.ImagePanorama(panoramaData.image);
+            viewer.add(currentPanorama);
+
+            // Set panorama baru
+            viewer.setPanorama(currentPanorama);
+
+            // Perbarui teks judul dan deskripsi
+            document.getElementById('overview-title').textContent = panoramaData.title;
+            document.getElementById('overview-description').textContent = panoramaData.description;
+
+            // Hapus kelas aktif dari semua tombol
+            const buttons = document.querySelectorAll('.panorama-btn');
+            buttons.forEach(btn => btn.classList.remove('border-[#81007f]'));
+
+            // Tambahkan kelas aktif ke tombol yang diklik
+            if (button) {
+                button.classList.add('border-[#81007f]');
+            }
+        }
+
+        // Atur panorama default saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            changePano('main-atrium', document.querySelector('.panorama-btn'));
+        });
+    </script>
+    <script>
+        const btn = document.querySelector(".mobile-menu-button");
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector("#overlay");
+        const body = document.querySelector("body");
+
+        btn.addEventListener("click", () => {
+            sidebar.classList.toggle("-translate-x-full");
+            overlay.classList.toggle("hidden");
+            body.classList.toggle("overflow-hidden");
+            if (!sidebar.classList.contains("-translate-x-full")) {
+                overlay.classList.remove("hidden");
+                body.classList.add("overflow-hidden");
+            } else {
+                overlay.classList.add("hidden");
+                body.classList.remove("overflow-hidden");
+            }
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+            body.classList.remove("overflow-hidden");
+        });
+    </script>
+    <script>
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(1, 0, 27, 0.5)';
+                navbar.style.backdropFilter = 'blur(5px)';
+            } else {
+                navbar.style.backgroundColor = 'transparent';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

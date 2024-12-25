@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - AEON Mall Tanjung Barat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <style>
+        .component {
+            font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+            width: 750px;
+            margin: 0 auto;
+            padding: 3rem;
+        }
+
+        .component blockquote.quote {
+            position: relative;
+            text-align: center;
+            padding: 1rem 1.2rem;
+            width: 80%;
+            /* create space for the quotes */
+            color: #484748;
+            margin: 1rem auto 2rem;
+        }
+
+        .component blockquote.EN {
+            background:
+                linear-gradient(to right, #039be5 4px, transparent 4px) 0 100%,
+                linear-gradient(to left, #039be5 4px, transparent 4px) 100% 0,
+                linear-gradient(to bottom, #039be5 4px, transparent 4px) 100% 0,
+                linear-gradient(to top, #039be5 4px, transparent 4px) 0 100%;
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+        }
+
+        /* -- create the quotation marks -- */
+        .component blockquote.quote:before,
+        .component blockquote.quote:after {
+            font-family: FontAwesome;
+            position: absolute;
+            color: #039be5;
+            font-size: 34px;
+        }
+
+        .component blockquote.EN:before {
+            content: open-quote;
+            top: -12px;
+            margin-right: -20px;
+            right: 100%;
+        }
+
+        .component blockquote.EN:after {
+            content: close-quote;
+            margin-left: -20px;
+            left: 100%;
+            bottom: -20px;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Inter', sans-serif;" class="tracking-normal">
+    <!-- Responsive Mobile Mode Navigation -->
+    <!-- Mobile menu bar -->
+    <div id="navbar"
+        class="fixed w-full mt-0 top-0 text-gray-100 bg-slate-900 flex justify-between lg:hidden drop-shadow-lg z-[20]">
+        <!-- Logo -->
+        <a href="#" class="p-4 text-white font-bold flex">
+            <span class="font-bold uppercase tracking-widest ml-2">AEON MALL</span>
+        </a>
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-button p-4 focus:outline-none md:hidden">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+    </div>
+    <!-- Mobile menu bar -->
+
+    <!-- Sidebar -->
+    <div id="overlay" class="fixed inset-0 bg-black opacity-80 hidden z-40"></div>
+    <div
+        class="sidebar w-64 lg:hidden md:hidden no-scrollbar overflow-y-scroll bg-slate-950 h-screen fixed inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out md:relative md:translate-x-0 z-50 text-white">
+        <!-- logo -->
+        <div class="px-4 pt-4 flex justify-center">
+            <a href="index.html" class="flex space-x-2">
+                <span class="font-extrabold uppercase tracking-widest">AEON MALL</span>
+            </a>
+        </div>
+
+        <!-- nav -->
+        <nav>
+            <ul class="list-none p-0">
+                <li class="mid-menu-header text-white">MAIN MENU</li>
+                <li class="mid-nav-link">
+                    <a href="index.html" class="mid-nav-link-child">
+                        <i class="fas fa-home"></i>
+                        <span class="ml-3">HOME</span>
+                    </a>
+
+                </li>
+                <li class="mid-nav-link">
+                    <a class="mid-has-dropdown" aria-controls="dropdown-dashboard"
+                        data-collapse-toggle="dropdown-dashboard">
+                        <i class="fas fa-fire text-cyan-300"></i>
+                        <span class="mid-title-sidebar text-cyan-300" sidebar-toggle-item>ABOUT</span>
+                        <i class="fas fa-angle-down text-cyan-300"></i>
+                    </a>
+                    <ul id="dropdown-dashboard" class="hidden py-2 space-y-2">
+                        <li><a href="overview.html" class="mid-nav-link-dropdown">AEON Overview</a></li>
+                        <li><a href="about.html" class="mid-nav-link-dropdown text-cyan-300">WHY AEON</a></li>
+                    </ul>
+                </li>
+                <li class="mid-nav-link">
+                    <a href="events.html" class="mid-nav-link-child">
+                        <i class="fas fa-project-diagram"></i>
+                        <span class="ml-3">EVENTS</span>
+                    </a>
+                </li>
+                <li class="mid-nav-link">
+                    <a href="contact-us.html" class="mid-nav-link-child">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="ml-3">CONTACT US</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="my-12">
+            </div>
+        </nav>
+    </div>
+    <!-- Sidebar -->
+    <!-- Responsive Mobile Mode Navigation -->
+
+    <!-- Responsive Desktop Mode Navigation -->
+    <nav class="hidden lg:block bg-white border-gray-200 fixed top-0 left-0 w-full z-50" id="navbar">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2.5">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="image/logo.png" class="h-12 mt-3" alt="Flowbite Logo" />
+            </a>
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+                class="inline-flex items-center p-2 ms-3 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul
+                    class="flex flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:mt-0 md:text-sm  md:border-0 md:bg-white md:space-x-8 md:rtl:space-x-reverse">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 bg-blue-700 rounded md:bg-transparent text-gray-700 md:p-0"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:text-blue-700 md:hover:text-blue-700 md:p-0 md:w-auto">About
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <div id="dropdownNavbar"
+                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                            <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="overview.html" class="block px-4 py-2 hover:bg-gray-100">AEON Overview</a>
+                                </li>
+                                <li>
+                                    <a href="about.html" class="block px-4 py-2 hover:bg-gray-100 ">WHY AEON</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="events.html"
+                            class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Events</a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html"
+                            class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Responsive Desktop Mode Navigation -->
+
+    <!-- Banner Image -->
+    <img src="https://www.aeonmall-deltamas.com/wp-content/themes/aeon/assets/img/img_index_01.jpg"
+        class="h-96 lg:h-auto w-full" alt="">
+    <!-- Banner Image -->
+
+    <div class="flex text-black flex-col min-h-screen" id="main-content">
+        <!-- Main Content -->
+        <main>
+            <!-- WHY AEON -->
+            <div class="bg-none lg:bg-[url('/image/polygon-scatter-haikei-3.svg')] lg:bg-cover">
+                <div class="py-20 lg:py-32">
+                    <div class="flex-grow container max-w-5xl mx-auto">
+                        <div class="text-center space-y-10 px-4">
+                            <h1 class="text-3xl lg:text-5xl text-slate-900 font-semibold">WHY AEON</h1>
+                            <p class="text-base lg:text-xl text-gray-600 leading-relaxed">AEON Mall tanjung barat adalah
+                                tempat yang sangat cocok untuk mengadakan acara karena lokasinya strategis dan mudah
+                                dijangkau. Mall ini dilengkapi dengan berbagai fasilitas modern, seperti area acara yang
+                                luas, parkir yang memadai, serta fasilitas umum yang bersih dan nyaman. Dengan kombinasi
+                                toko-toko internasional dan lokal, pilihan tempat makan, dan hiburan yang beragam, AEON
+                                Mall mampu menarik perhatian berbagai kalangan, mulai dari keluarga hingga anak muda.
+                                Selain itu, reputasi AEON yang terpercaya memberikan nilai tambah, ditambah lagi dengan
+                                ruang acara yang terintegrasi serta dukungan pemasaran yang membantu menjangkau lebih
+                                banyak pengunjung.
+                            </p>
+                        </div>
+                        <div class="mt-20 lg:mt-32">
+                            <h1 class="text-3xl text-slate-900 font-semibold mb-5 ml-4">Our Vision</h1>
+                            <div class="grid grid-cols-1 lg:grid-cols-3 mt-10">
+                                <div class="flex tracking-normal mt-5 lg:mt-0">
+                                    <img src="image/customer.png" class="w-24 h-24" alt="">
+                                    <div class="mt-2">
+                                        <p class="font-semibold">Basic Philosophy</p>
+                                        <p class="text-sm mt-2 text-gray-600">Pelanggan Diutamakan.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex tracking-normal mt-5 lg:mt-0">
+                                    <img src="image/management-philo.png" class="w-[90px] h-[90px] mt-2" alt="">
+                                    <div class="mt-2 ml-5">
+                                        <p class="font-semibold">Management Philosophy</p>
+                                        <p class="text-sm mt-2 text-gray-600">AEON MALL adalah Pengembang Desain
+                                            Kehidupan yang
+                                            bekerja
+                                            sama dengan
+                                            komunitas dan menciptakan cara hidup untuk masa depan.</p>
+                                    </div>
+                                </div>
+                                <div class="flex tracking-normal mt-5 lg:mt-0">
+                                    <img src="image/management-vision.png" class="w-24 h-24" alt="">
+                                    <div class="mt-2">
+                                        <p class="font-semibold">Management Vision</p>
+                                        <p class="text-sm mt-2 text-gray-600">Menjadi perusahaan yang akan menyentuh
+                                            hati 5 miliar pengunjung di seluruh
+                                            Asia.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- WHY AEON -->
+
+            <!-- SLOGAN -->
+            <div class="bg-blue-50 hidden"
+                style="background-image: radial-gradient(#93c5fd 1px, transparent 0); background-size: 20px 20px;">
+                <div class="flex-grow container max-w-5xl mx-auto">
+                    <p>‎ </p>
+                    <h1 class="text-3xl font-semibold mt-10 text-center text-slate-950">Corporate Slogan</h1>
+                    <div class="component">
+                        <blockquote class="callout quote EN text-2xl text-slate-600 font-medium">
+                            Sharing a sense of lively participation
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <!-- SLOGAN -->
+
+            <!-- GROUP PROFILE -->
+            <div class="bg-none lg:bg-[url('/image/polygon-scatter-haikei-1.svg')] lg:bg-cover">
+                <div class="py-0 lg:py-32">
+                    <div class="flex-grow container max-w-5xl mx-auto">
+                        <div class="text-center space-y-10 px-4 lg:px-0">
+                            <h1 class="text-3xl lg:text-5xl text-slate-900 font-semibold mt-0 lg:mt-20">GROUP PROFILE
+                            </h1>
+                            <p class="text-base lg:text-xl text-gray-600 leading-relaxed">Sebagai grup ritel terbesar di
+                                Jepang, AEON memiliki 10 aspek bisnis utama yang berkembang secara seimbang di bawah
+                                struktur perusahaan induk murni.
+                                AEON MALL adalah perusahaan inti AEON yang bertanggung jawab atas bisnis pengembangan
+                                properti komersial.
+                            </p>
+                        </div>
+                        <div class="mt-20">
+                            <center>
+                                <img src="https://www.aeonmall.com/en/about/images/cppf_img02.gif" alt="">
+                            </center>
+                        </div>
+                        <div class="mt-20 text-center">
+                            <a href="https://www.aeonmall.com/en/about/images/company_organize_en.pdf" target="_blank"
+                                class="text-2xl border border-gray-300 px-10 py-4 rounded-full"><i
+                                    class="fas fa-network-wired"></i>
+                                Organization</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- GROUP PROFILE -->
+
+            <!-- MAPS -->
+            <iframe src="http://maps.google.com/maps?q=-6.305682,106.840814&z=16&output=embed" height="700" width="100%"
+                class="mt-20 lg:mt-0"></iframe>
+            <!-- MAPS -->
+        </main>
+        <!-- Main Content -->
+        <!-- Footer -->
+        <footer class="bg-slate-800 text-white py-8">
+            <div class="container mx-auto text-center">
+                <div class="justify-center items-center space-x-10 mb-10 lg:flex">
+                    <div>
+                        <img src="image/logo-removebg.png" class="ml-7 lg:ml-2" alt="">
+                        <ul class="flex space-x-5 ml-8 lg:space-x-10 lg:-ml-4 mt-10 list-none text-lg">
+                            <li class="ml-0"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="social-media" class="flex justify-center items-center space-x-10 mb-14">
+                    <a href="https://www.facebook.com/aeonmalltanjungbarat/" target="_BLANK"><i
+                            class="fab fa-facebook text-4xl"></i></a>
+                    <a href="https://instagram.com/aeonmall_tanjungbarat?utm_medium=copy_link" target="_BLANK"><i
+                            class="fab fa-instagram text-4xl"></i></a>
+                    <a href="https://youtube.com/channel/UCdebImqCPmfu0xb8enzRkVw" target="_BLANK"><i
+                            class="fab fa-youtube text-4xl"></i></a>
+                </div>
+                <div id="copyright" class="text-lg">
+                    <p>Copyright &copy; 2023 AEON Mall. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script>
+        const btn = document.querySelector(".mobile-menu-button");
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector("#overlay");
+        const body = document.querySelector("body");
+
+        btn.addEventListener("click", () => {
+            sidebar.classList.toggle("-translate-x-full");
+            overlay.classList.toggle("hidden");
+            body.classList.toggle("overflow-hidden");
+            if (!sidebar.classList.contains("-translate-x-full")) {
+                overlay.classList.remove("hidden");
+                body.classList.add("overflow-hidden");
+            } else {
+                overlay.classList.add("hidden");
+                body.classList.remove("overflow-hidden");
+            }
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+            body.classList.remove("overflow-hidden");
+        });
+    </script>
+    <script>
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(1, 0, 27, 0.5)';
+                navbar.style.backdropFilter = 'blur(5px)';
+            } else {
+                navbar.style.backgroundColor = 'transparent';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

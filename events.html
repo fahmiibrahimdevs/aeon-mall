@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - AEON Mall Tanjung Barat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body style="font-family: 'Inter', sans-serif;" class="tracking-normal">
+    <!-- Responsive Mobile Mode Navigation -->
+    <!-- Mobile menu bar -->
+    <div id="navbar"
+        class="fixed w-full mt-0 top-0 text-gray-100 bg-slate-900 flex justify-between lg:hidden drop-shadow-lg z-[20]">
+        <!-- Logo -->
+        <a href="#" class="p-4 text-white font-bold flex">
+            <span class="font-bold uppercase tracking-widest ml-2">AEON MALL</span>
+        </a>
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-button p-4 focus:outline-none md:hidden">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+    </div>
+    <!-- Mobile menu bar -->
+
+    <!-- Sidebar -->
+    <div id="overlay" class="fixed inset-0 bg-black opacity-80 hidden z-40"></div>
+    <div
+        class="sidebar w-64 lg:hidden md:hidden no-scrollbar overflow-y-scroll bg-slate-950 h-screen fixed inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out md:relative md:translate-x-0 z-50 text-white">
+        <!-- logo -->
+        <div class="px-4 pt-4 flex justify-center">
+            <a href="index.html" class="flex space-x-2">
+                <span class="font-extrabold uppercase tracking-widest">AEON MALL</span>
+            </a>
+        </div>
+
+        <!-- nav -->
+        <nav>
+            <ul class="list-none p-0">
+                <li class="mid-menu-header text-white">MAIN MENU</li>
+                <li class="mid-nav-link">
+                    <a href="index.html" class="mid-nav-link-child">
+                        <i class="fas fa-home"></i>
+                        <span class="ml-3">HOME</span>
+                    </a>
+
+                </li>
+                <li class="mid-nav-link">
+                    <a class="mid-has-dropdown" aria-controls="dropdown-dashboard"
+                        data-collapse-toggle="dropdown-dashboard">
+                        <i class="fas fa-fire"></i>
+                        <span class="mid-title-sidebar" sidebar-toggle-item>ABOUT</span>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul id="dropdown-dashboard" class="hidden py-2 space-y-2">
+                        <li><a href="overview.html" class="mid-nav-link-dropdown">AEON Overview</a></li>
+                        <li><a href="about.html" class="mid-nav-link-dropdown">WHY AEON</a></li>
+                    </ul>
+                </li>
+                <li class="mid-nav-link">
+                    <a href="events.html" class="mid-nav-link-child text-cyan-300">
+                        <i class="fas fa-project-diagram"></i>
+                        <span class="ml-3">EVENTS</span>
+                    </a>
+                </li>
+                <li class="mid-nav-link">
+                    <a href="contact-us.html" class="mid-nav-link-child">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="ml-3">CONTACT US</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="my-12">
+            </div>
+        </nav>
+    </div>
+    <!-- Sidebar -->
+    <!-- Responsive Mobile Mode Navigation -->
+
+    <!-- Responsive Desktop Mode Navigation -->
+    <nav class="hidden lg:block bg-white border-gray-200 fixed top-0 left-0 w-full z-50" id="navbar">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2.5">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="image/logo.png" class="h-12 mt-3" alt="Flowbite Logo" />
+            </a>
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+                class="inline-flex items-center p-2 ms-3 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul
+                    class="flex flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:mt-0 md:text-sm  md:border-0 md:bg-white md:space-x-8 md:rtl:space-x-reverse">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 text-black bg-blue-700 rounded md:bg-transparent md:p-0"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center justify-between w-full py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">About
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <div id="dropdownNavbar"
+                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                            <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="overview.html" class="block px-4 py-2 hover:bg-gray-100">AEON Overview</a>
+                                </li>
+                                <li>
+                                    <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">WHY AEON</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="events.html"
+                            class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:text-blue-700 md:p-0">Events</a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html"
+                            class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Responsive Desktop Mode Navigation -->
+
+    <!-- Banner Image -->
+    <img src="https://www.aeonmall-deltamas.com/wp-content/themes/aeon/assets/img/img_index_01.jpg"
+        class="h-96 lg:h-auto w-full" alt="">
+    <!-- Banner Image -->
+
+    <div class="flex text-black flex-col min-h-screen mt-12 lg:mt-20" id="main-content">
+        <!-- Main Content -->
+        <main>
+            <div class="flex-grow container max-w-5xl mx-auto">
+                <!-- Events -->
+                <div class="text-center space-y-10 px-4 lg:px-0">
+                    <h1 class="text-3xl lg:text-5xl text-slate-900 font-semibold">EVENTS</h1>
+                    <p class="text-base lg:text-xl text-gray-600 leading-relaxed">AEON MALL menghadirkan rangkaian acara
+                        menarik untuk melengkapi pengalaman belanja Anda. Mulai dari festival budaya, bazar tematik,
+                        hingga aktivitas kreatif untuk keluarga, setiap event dirancang untuk menciptakan momen istimewa
+                        yang tidak terlupakan.</p>
+                </div>
+                <!-- Events -->
+
+                <!-- Cards -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-10 mt-10 mb-32 justify-items-center">
+                    <div class="relative w-72 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div
+                            class="absolute top-10 -right-10 bg-indigo-500 text-white text-sm font-bold uppercase px-16 py-1 transform rotate-45 translate-x-0 -translate-y-3">
+                            Lt. 5
+                        </div>
+                        <img src="image/events/1.png" alt="Product Image" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <p class="text-sm leading-relaxed text-gray-600">3-6 Oktober 2024</p>
+                            <h3 class="text-lg font-semibold text-gray-800">Aeonime 2024 Otaku and Doujin Attack</h3>
+                            <p class="text-sm leading-relaxed text-gray-600 mt-2" id="shortText">Aeonime Vol. 3 dengan
+                                tema "Otaku & Doujin Attack" diadakan di AEON Mall Tanjung Barat pada ...</p>
+                            <button class="toggleDetails text-indigo-500 text-sm mt-2">Read More</button>
+                            <div id="longText" class="text-sm leading-relaxed text-gray-600 mt-2 hidden">
+                                Aeonime Vol. 3 dengan tema "Otaku & Doujin Attack" diadakan di AEON Mall Tanjung Barat
+                                pada 3-6 Oktober 2024, merayakan budaya pop Jepang, terutama anime dan cosplay. Acara
+                                ini menampilkan berbagai kegiatan seperti meet & greet dengan cosplayer terkenal,
+                                kompetisi cosplay, pertunjukan idol dan anisong, serta booth merchandise otaku dan
+                                trading card. Pengunjung juga dapat menikmati pertunjukan DJ anime dance party dan area
+                                khusus untuk seniman cosplay. Acara ini berhasil menarik banyak penggemar anime dan
+                                cosplay untuk merayakan kreativitas dan kecintaan terhadap budaya Jepang.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-72 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div
+                            class="absolute top-10 -right-10 bg-indigo-500 text-white text-sm font-bold uppercase px-16 py-1 transform rotate-45 translate-x-5 -translate-y-2">
+                            Main Atrium
+                        </div>
+                        <img src="image/events/2.jpeg" alt="Product Image" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <p class="text-sm leading-relaxed text-gray-600">3-7 Juli 2024</p>
+                            <h3 class="text-lg font-semibold text-gray-800">AEON Mall Indonesia Badminton Cup</h3>
+                            <p class="text-sm leading-relaxed text-gray-600 mt-2" id="shortText2">AEON Mall Tanjung
+                                Barat menjadi tuan rumah bagi AEON Mall Indonesia Badminton Cup 2024...</p>
+                            <button class="toggleDetails text-indigo-500 text-sm mt-2">Read More</button>
+                            <div id="longText2" class="text-sm leading-relaxed text-gray-600 mt-2 hidden">
+                                AEON Mall Tanjung Barat menjadi tuan rumah bagi AEON Mall Indonesia Badminton Cup 2024,
+                                sebuah turnamen bulu tangkis yang menyasar para atlet muda. Turnamen ini, yang diadakan
+                                pada Juli 2024, dibagi menjadi kategori usia 10-12 tahun dengan sistem gugur, dan
+                                menghadirkan hadiah total hingga Rp39 juta. Para juara dari masing-masing AEON Mall
+                                lainnya bertemu di partai final untuk memperebutkan gelar juara. Tidak hanya itu, acara
+                                ini juga menampilkan pertandingan spesial seperti "Fun Match" antara mantan atlet bulu
+                                tangkis Agripina dan selebritas Jinjuu, serta sejumlah tantangan seperti "Juggling
+                                Challenge" dan "Serve to Hole Challenge" dengan kesempatan mendapatkan voucher belanja.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-72 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div
+                            class="absolute top-10 -right-10 bg-indigo-500 text-white text-sm font-bold uppercase px-16 py-1 transform rotate-45 translate-x-5 -translate-y-2">
+                            Main Atrium
+                        </div>
+                        <img src="image/events/3.jpg" alt="Product Image" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <p class="text-sm leading-relaxed text-gray-600">18 Mei - 11 Juni 2023</p>
+                            <h3 class="text-lg font-semibold text-gray-800">Anniversary The 1st: Arigato AEON Circle
+                            </h3>
+                            <p class="text-sm leading-relaxed text-gray-600 mt-2" id="shortText2">"Anniversary The 1st:
+                                Arigato AEON Circle!" adalah acara perayaan ulang tahun pertama AEON Mall ...</p>
+                            <button class="toggleDetails text-indigo-500 text-sm mt-2">Read More</button>
+                            <div id="longText2" class="text-sm leading-relaxed text-gray-600 mt-2 hidden">
+                                "Anniversary The 1st: Arigato AEON Circle!" adalah acara perayaan ulang tahun pertama
+                                AEON Mall Tanjung Barat, yang berlangsung dari 18 Mei hingga 11 Juni 2023. Pengunjung
+                                berkesempatan memenangkan tiket ke Jepang dengan belanja Rp 500.000, serta menikmati
+                                berbagai kegiatan bertema Jepang seperti workshop Ikebana, kompetisi origami, parade
+                                cosplay, dan pertunjukan tarian Yosakoi dan Taiko. Selain itu, ada juga dekorasi bertema
+                                Kyoto Night Market untuk pengalaman foto. Acara ini juga diisi dengan penampilan musik
+                                dan hiburan lainnya.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-72 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div
+                            class="absolute top-10 -right-10 bg-indigo-500 text-white text-sm font-bold uppercase px-16 py-1 transform rotate-45 translate-x-0 -translate-y-3">
+                            Lt. 5
+                        </div>
+                        <img src="image/events/4.jpg" alt="Product Image" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <p class="text-sm leading-relaxed text-gray-600">3-8 Oktober 2023</p>
+                            <h3 class="text-lg font-semibold text-gray-800">Glamlocal Warehouse Sale 2023</h3>
+                            <p class="text-sm leading-relaxed text-gray-600 mt-2" id="shortText3">Glam Local Warehouse
+                                Sale 2023 di AEON Mall Tanjung Barat adalah bazar dari brand lokal untuk hijab dan ...
+                            </p>
+                            <button class="toggleDetails text-indigo-500 text-sm mt-2">Read More</button>
+                            <div id="longText3" class="text-sm leading-relaxed text-gray-600 mt-2 hidden">
+                                Glam Local Warehouse Sale 2023 di AEON Mall Tanjung Barat adalah bazar dari brand lokal
+                                untuk hijab dan baju muslim yang diadakan dari 28 November hingga 3 Desember 2023. Acara
+                                ini menampilkan 51 brand fashion lokal, termasuk pakaian anak, dewasa, busana muslim,
+                                hijab, dan aksesori. Pengunjung dapat menikmati diskon hingga 90% untuk produk-produk
+                                tersebut. Bazar ini memberikan kesempatan bagi pelaku UMKM untuk mempromosikan produk
+                                mereka, dan banyak pengunjung yang antusias berbelanja, terutama di hari-hari pertama
+                                acara.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-72 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div
+                            class="absolute top-10 -right-10 bg-indigo-500 text-white text-sm font-bold uppercase px-16 py-1 transform rotate-45 translate-x-0 -translate-y-3">
+                            Lt. 5
+                        </div>
+                        <img src="image/events/5.jpg" alt="Product Image" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <p class="text-sm leading-relaxed text-gray-600">24 Oktober - 17 November 2024</p>
+                            <h3 class="text-lg font-semibold text-gray-800">10th Anniversary Final Season Attack on
+                                Titan</h3>
+                            <p class="text-sm leading-relaxed text-gray-600 mt-2" id="shortText4">AEON Mall Tanjung
+                                Barat mengadakan acara 10th Anniversary Final Season Attack on Titan dari 24 Oktober...
+                            </p>
+                            <button class="toggleDetails text-indigo-500 text-sm mt-2">Read More</button>
+                            <div id="longText4" class="text-sm leading-relaxed text-gray-600 mt-2 hidden">
+                                AEON Mall Tanjung Barat mengadakan acara 10th Anniversary Final Season Attack on Titan
+                                dari 24 Oktober hingga 17 November 2024, merayakan 10 tahun Attack on Titan. Acara ini
+                                menyajikan pameran dengan patung raksasa karakter AOT, maze bertema AOT, serta Pop-Up
+                                Cafe dan merchandise eksklusif. Pengunjung juga dapat menikmati spot foto ikonik dan
+                                membeli barang-barang resmi bertema AOT.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-72 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div
+                            class="absolute top-10 -right-10 bg-indigo-500 text-white text-sm font-bold uppercase px-16 py-1 transform rotate-45 translate-x-5 -translate-y-2">
+                            Main Atrium
+                        </div>
+                        <img src="image/events/6.jpg" alt="Product Image" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <p class="text-sm leading-relaxed text-gray-600">31 Oktober - 5 November 2023</p>
+                            <h3 class="text-lg font-semibold text-gray-800">Pokemon TGC Academia</h3>
+
+                            <p>‎ </p>
+                            <p class="text-sm leading-relaxed text-gray-600 mt-2" id="shortText5">Acara ini bertujuan
+                                untuk mengenalkan permainan kartu Pokémon kepada pengunjung, khususnya mereka...</p>
+                            <button class="toggleDetails text-indigo-500 text-sm mt-2">Read More</button>
+                            <div id="longText5" class="text-sm leading-relaxed text-gray-600 mt-2 hidden">
+                                Acara ini bertujuan untuk mengenalkan permainan kartu Pokémon kepada pengunjung,
+                                khususnya mereka yang baru mulai tertarik atau belum familiar dengan Pokémon Trading
+                                Card Game (TCG). Di event ini, pengunjung dapat mengikuti berbagai aktivitas seperti
+                                workshop "Learn & Play" yang mengajarkan cara bermain kartu Pokémon, turnamen mini untuk
+                                pemula, serta acara hiburan seperti Meet & Greet dengan Pikachu, Pikachu Parade, dan
+                                Dance Show yang berlangsung setiap akhir pekan. Selain itu, ada Pokémon Pop Up Store
+                                yang menjual produk-produk Pokémon resmi​.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cards -->
+            </div>
+        </main>
+        <!-- Main Content -->
+        <footer class="bg-slate-800 text-white py-8">
+            <div class="container mx-auto text-center">
+                <div class="justify-center items-center space-x-10 mb-10 lg:flex">
+                    <div>
+                        <img src="image/logo-removebg.png" class="ml-7 lg:ml-2" alt="">
+                        <ul class="flex space-x-5 ml-8 lg:space-x-10 lg:-ml-4 mt-10 list-none text-lg">
+                            <li class="ml-0"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="social-media" class="flex justify-center items-center space-x-10 mb-14">
+                    <a href="https://www.facebook.com/aeonmalltanjungbarat/" target="_BLANK"><i
+                            class="fab fa-facebook text-4xl"></i></a>
+                    <a href="https://instagram.com/aeonmall_tanjungbarat?utm_medium=copy_link" target="_BLANK"><i
+                            class="fab fa-instagram text-4xl"></i></a>
+                    <a href="https://youtube.com/channel/UCdebImqCPmfu0xb8enzRkVw" target="_BLANK"><i
+                            class="fab fa-youtube text-4xl"></i></a>
+                </div>
+                <div id="copyright" class="text-lg">
+                    <p>Copyright &copy; 2023 AEON Mall. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script>
+        // Select all the "Read More" buttons
+        const buttons = document.querySelectorAll('.toggleDetails');
+
+        // Loop through each button and add an event listener
+        buttons.forEach((button) => {
+            button.addEventListener('click', function () {
+                // Find the closest parent card of the button
+                const card = this.closest('.relative');
+
+                // Find the short and long text within the same card
+                const shortText = card.querySelector('[id^="shortText"]');
+                const longText = card.querySelector('[id^="longText"]');
+
+                // Toggle visibility of the texts
+                if (shortText && longText) {
+                    if (shortText.classList.contains('hidden')) {
+                        shortText.classList.remove('hidden');
+                        longText.classList.add('hidden');
+                        this.textContent = 'Read More';
+                    } else {
+                        shortText.classList.add('hidden');
+                        longText.classList.remove('hidden');
+                        this.textContent = 'Read Less';
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        const btn = document.querySelector(".mobile-menu-button");
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector("#overlay");
+        const body = document.querySelector("body");
+
+        btn.addEventListener("click", () => {
+            sidebar.classList.toggle("-translate-x-full");
+            overlay.classList.toggle("hidden");
+            body.classList.toggle("overflow-hidden");
+            if (!sidebar.classList.contains("-translate-x-full")) {
+                overlay.classList.remove("hidden");
+                body.classList.add("overflow-hidden");
+            } else {
+                overlay.classList.add("hidden");
+                body.classList.remove("overflow-hidden");
+            }
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+            body.classList.remove("overflow-hidden");
+        });
+    </script>
+    <script>
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(1, 0, 27, 0.5)';
+                navbar.style.backdropFilter = 'blur(5px)';
+            } else {
+                navbar.style.backgroundColor = 'transparent';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
